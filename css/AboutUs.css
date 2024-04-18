@@ -1,7 +1,6 @@
 
 * {
 margin: 0;
-padding: 0;
 box-sizing: border-box;
 }
 
@@ -9,10 +8,6 @@ box-sizing: border-box;
 body {
 font-family: Arial, sans-serif;
 line-height: 1.6;
-background-image: url(images/student.png);
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
 }
 
 nav{
@@ -74,14 +69,6 @@ width: 80%;
 }
 
 /*Styling Buttons*/
-
-.nav-buttons{
-display: flex;
-list-style: none;
-
-justify-content: space-between;
-align-items: center;
-}
 .login-button{
 background-color: transparent;
 border: 1.5px solid #f2f5f7;
@@ -126,7 +113,6 @@ transition: all 0.3s ease;
 display: none;
 }
 
-/*Stying for small screens*/
 @media screen and (max-width: 800px){
 nav{
     position: fixed;
@@ -203,196 +189,96 @@ transform: rotate(45deg) translate(-5px,-6px);
 
 /* Hero section styles */
 .hero {
-
-position: relative;
+background-color: #fff;
+padding: 100px 0;
 display: flex;
+justify-content: center;
 align-items: center;
-justify-content: space-between;
-background-color: #f5f5f5;
-max-width: 100%;
-opacity: 0.9;
+margin:2% auto;
+}
+
+.hero .content {
+flex: 1;
+text-align: left;
 }
 
 .hero h1 {
-font-size: 36px;
+font-size: 48px;
 margin-bottom: 20px;
-color: #333;
+color: #1e90ff;
 }
 
 .hero p {
 font-size: 18px;
-color: #666;
-margin: 2%;
-line-height: 1.5;
-padding: 2% 4%;
+margin-bottom: 20px;
+line-height: 1.6;
 }
 
-.hero .btn {
-padding: 10px 20px;
-background-color: #a43c3c;
-color: white;
-text-decoration: none;
-border-radius: 4px;
-transition: background-color 0.3s;
-}
-
-.hero .btn:hover {
-background-color: #911b1b;
-cursor: pointer;
-
-}
-
-.banner-img {
-
-position: relative;
-width: 100%;
-float: inline-start;
-max-width: 50%;
-height: 50%;
-object-fit: cover;
-display: block;
-margin-right: 2%;
-border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-.hero {
-flex-direction: column;
-text-align: center;
-}
-
-.hero .hero-content {
-margin-top: 45%;
-}
-}
-
-footer {
-background-color: #a43c3c;
-color: white;
-text-align: center;
-padding: 20px 0;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-.header .menu {
-    display: block;
-}
-
-.header .icon {
-    display: block;
-}
-
-.overlay {
-    width: 100%;
-}
-
-.header .logo {
-    display: block;
-}
-
-.features {
-    padding: 20px 10px;
-}
-
-.feature {
-    width: 100%;
-    height: auto;
-}
-
-.card {
-    width: 90%;
-}
-
-.blog-post {
-    padding: 20px 10px;
-}
-
-.gallery-item img {
-    margin-bottom: 10px;
-}
-
-.contact form,
-.address {
-    width: 100%;
-}
-}
-/* Ring styles */
-
-
-.heading {
-text-align: center;
-font-size: 2.0em;
-letter-spacing: 1px;
-padding: 40px;
-color: white;
-}
-
-.gallery-image {
-padding: 20px;
+.images {
 display: flex;
+justify-content: space-between;
 flex-wrap: wrap;
-justify-content: center;
+width: 100%;
+max-width: 1200px;
+margin: 10% auto;
 }
 
-.gallery-image img {
-height: 250px;
-width: 350px;
-transform: scale(1.0);
-transition: transform 0.4s ease;
+.about-image {
+width: 45%;
+max-width: 400px;
+border-radius: 10px;
 }
 
-.img-box {
-box-sizing: content-box;
-margin: 10px;
-height: 250px;
-width: 350px;
-overflow: hidden;
-display: inline-block;
-color: white;
-position: relative;
-background-color: white;
+.testimonials {
+background-color: #fff;
+padding: 50px 0;
 }
 
-.caption {
-position: absolute;
-bottom: 5px;
-left: 20px;
-opacity: 0.0;
-transition: transform 0.3s ease, opacity 0.3s ease;
+.testimonials h2 {
+text-align: center;
+margin-bottom: 40px;
+color: #333;
 }
 
-.transparent-box {
-height: 250px;
-width: 350px;
-background-color:rgba(0, 0, 0, 0);
-position: absolute;
-top: 0;
-left: 0;
-transition: background-color 0.3s ease;
+.testimonials p {
+font-size: 18px;
+line-height: 1.6;
+color: #666;
 }
 
-.img-box:hover img { 
-transform: scale(1.1);
+.testimonials .container {
+max-width: 1200px;
+margin: 0 auto;
 }
 
-.img-box:hover .transparent-box {
-background-color:rgba(0, 0, 0, 0.5);
+.testimonials .row {
+margin-bottom: 30px;
 }
 
-.img-box:hover .caption {
-transform: translateY(-20px);
-opacity: 1.0;
+.testimonials .col-md-6 {
+padding: 0 15px;
 }
 
-.img-box:hover {
-cursor: pointer;
+.testimonials .col-md-6 p {
+padding: 20px;
+background-color: #f9f9f9;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.caption > p:nth-child(2) {
-font-size: 0.8em;
+.testimonials .col-md-6:nth-child(odd) p {
+background-color: #f0f0f0;
 }
 
-.opacity-low {
-opacity: 0.5;
+.testimonials .col-md-6 p::before {
+content: '\201C'; /* Left double quotation mark */
+font-size: 36px;
+color: #ccc;
+margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+.testimonials .col-md-6 p {
+    font-size: 16px;
+}
 }
