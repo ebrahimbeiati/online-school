@@ -20,11 +20,17 @@ document.addEventListener("click", () => {
   });
 });
 
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
 
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
+hamburger.addEventListener("click", () => {
+  //Animate Links
+  navLinks.classList.toggle("open");
+  links.forEach((link) => {
+    link.classList.toggle("fade");
+  });
 
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
+  //Hamburger Animation
+  hamburger.classList.toggle("toggle");
+});
