@@ -1,207 +1,204 @@
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    height: 100vh;
-    margin: -20px 0 50px;
-   display: inline-block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  
+font-family: Arial, sans-serif;
+
 }
 
-
 nav{
-    height: 6rem;
-    width: 100vw;
-    background-color: #ba5925;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-    display: flex;
-    z-index: 10;
-    margin-bottom: 10px;
+height: 6rem;
+width: 100vw;
+background-color: #ba5925;
+box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+display: flex;
+z-index: 10;
+margin-bottom: 10px;
 }
 
 /*Styling logo*/
 .logo{
-    padding:1vh 1vw;
-    text-align: center;
+padding:1vh 1vw;
+text-align: center;
 
 }
 .logo img {
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
+height: 5rem;
+width: 5rem;
+border-radius: 50%;
 }
 
 /*Styling Links*/
 .nav-links{
-    display: flex;
-    list-style: none; 
-    font-size: bold;
-    color: black;
-    width: 88vw;
-    padding: 0 0.7vw;
-    justify-content: space-evenly;
-    align-items: center;
-    text-transform: uppercase;
+display: flex;
+list-style: none; 
+font-size: bold;
+color: black;
+width: 88vw;
+padding: 0 0.7vw;
+justify-content: space-evenly;
+align-items: center;
+text-transform: uppercase;
 }
 .nav-links li a{
-    text-decoration: none;
-    margin: 0 0.7vw;
+text-decoration: none;
+margin: 0 0.7vw;
 }
 .nav-links li a:hover {
-    color: #61DAFB;
+color: #61DAFB;
 }
 .nav-links li {
-    position: relative;
+position: relative;
 }
 .nav-links li a::before {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0%;
-    background-color: #61DAFB;
-    position: absolute;
-    transition: all ease-in-out 250ms;
-    margin: 0 0 0 10%;
+content: "";
+display: block;
+height: 3px;
+width: 0%;
+background-color: #61DAFB;
+position: absolute;
+transition: all ease-in-out 250ms;
+margin: 0 0 0 10%;
 }
 .nav-links li a:hover::before{
-    width: 80%;
+width: 80%;
 }
 
 /*Styling Buttons*/
 
 .nav-buttons{
-    display: flex;
-    list-style: none;
+display: flex;
+list-style: none;
 
-    justify-content: space-between;
-    align-items: center;
+justify-content: space-between;
+align-items: center;
 }
 .login-button{
-    background-color: transparent;
-    border: 1.5px solid #f2f5f7;
-    border-radius: 2em;
-    padding: 0.6rem 0.8rem;
-    margin-left: 2vw;
-    font-size: 1rem;
-    cursor: pointer;
+background-color: transparent;
+border: 1.5px solid #f2f5f7;
+border-radius: 2em;
+padding: 0.6rem 0.8rem;
+margin-left: 2vw;
+font-size: 1rem;
+cursor: pointer;
 
 }
 .login-button:hover {
-    color: #070808;
-    background-color: #f2f5f7;
-    border:1.5px solid #f2f5f7;
-    transition: all ease-in-out 350ms;
+color: #070808;
+background-color: #f2f5f7;
+border:1.5px solid #f2f5f7;
+transition: all ease-in-out 350ms;
 }
 .join-button{
-    color: #131418;
-    background-color: #61DAFB;
-    border: 1.5px solid #61DAFB;
-    border-radius: 2em;
-    padding: 0.6rem 0.8rem;
-    font-size: 1rem;
-    cursor: pointer;
+color: #131418;
+background-color: #61DAFB;
+border: 1.5px solid #61DAFB;
+border-radius: 2em;
+padding: 0.6rem 0.8rem;
+font-size: 1rem;
+cursor: pointer;
 }
 .join-button:hover {
-    color: #f2f5f7;
-    background-color: transparent;
-    border:1.5px solid #f2f5f7;
-    transition: all ease-in-out 350ms;
+color: #f2f5f7;
+background-color: transparent;
+border:1.5px solid #f2f5f7;
+transition: all ease-in-out 350ms;
 }
 
 /*Styling Hamburger Icon*/
 .hamburger div{
-    width: 30px;
-    height:3px;
-    background: #f2f5f7;
-    margin: 5px;
-    transition: all 0.3s ease;
+width: 30px;
+height:3px;
+background: #f2f5f7;
+margin: 5px;
+transition: all 0.3s ease;
 }
 .hamburger{
-    display: none;
+display: none;
 }
 
 /*Stying for small screens*/
 @media screen and (max-width: 800px){
-    nav{
-        position: fixed;
-        z-index: 3;
-    }
-    .hamburger{
-        display:block;
-        position: absolute;
-        cursor: pointer;
-        right: 5%;
-        top: 50%;
-        transform: translate(-5%, -50%);
-        z-index: 2;
-        transition: all 0.7s ease;
-    }
-    .nav-links{
-        position: fixed;
-        background: #e95607;
-        height: 100vh;
-        width: 100%;
-        flex-direction: column;
-        clip-path: circle(50px at 90% -20%);
-        -webkit-clip-path: circle(50px at 90% -10%);
-        transition: all 1s ease-out;
-        pointer-events: none;
-        color:white
-    }
-    .nav-links.open{
-        clip-path: circle(1000px at 90% -10%);
-        -webkit-clip-path: circle(1000px at 90% -10%);
-        pointer-events: all;
-    }
-    .nav-links li{
-        opacity: 0;
-    }
-    .nav-links li:nth-child(1){
-        transition: all 0.5s ease 0.2s;
-    }
-    .nav-links li:nth-child(2){
-        transition: all 0.5s ease 0.4s;
-    }
-    .nav-links li:nth-child(3){
-        transition: all 0.5s ease 0.6s;
-    }
-    .nav-links li:nth-child(4){
-        transition: all 0.5s ease 0.7s;
-    }
-    .nav-links li:nth-child(5){
-        transition: all 0.5s ease 0.8s;
-    }
-    .nav-links li:nth-child(6){
-        transition: all 0.5s ease 0.9s;
-        margin: 0;
-    }
-    .nav-links li:nth-child(7){
-        transition: all 0.5s ease 1s;
-        margin: 0;
-    }
-    li.fade{
-        opacity: 1;
-    }
+nav{
+    position: fixed;
+    z-index: 3;
+    height: 6rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.hamburger{
+    display:block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+}
+.nav-links{
+    position: fixed;
+    background: #e95607;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    color:white
+}
+.nav-links.open{
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+}
+.nav-links li{
+    opacity: 0;
+}
+.nav-links li:nth-child(1){
+    transition: all 0.5s ease 0.2s;
+}
+.nav-links li:nth-child(2){
+    transition: all 0.5s ease 0.4s;
+}
+.nav-links li:nth-child(3){
+    transition: all 0.5s ease 0.6s;
+}
+.nav-links li:nth-child(4){
+    transition: all 0.5s ease 0.7s;
+}
+.nav-links li:nth-child(5){
+    transition: all 0.5s ease 0.8s;
+}
+.nav-links li:nth-child(6){
+    transition: all 0.5s ease 0.9s;
+    margin: 0;
+}
+.nav-links li:nth-child(7){
+    transition: all 0.5s ease 1s;
+    margin: 0;
+}
+li.fade{
+    opacity: 1;
+}
 }
 /*Animating Hamburger Icon on Click*/
 .toggle .line1{
-    transform: rotate(-45deg) translate(-5px,6px);
+transform: rotate(-45deg) translate(-5px,6px);
 }
 .toggle .line2{
-    transition: all 0.7s ease;
-    width:0;
+transition: all 0.7s ease;
+width:0;
 }
 .toggle .line3{
-    transform: rotate(45deg) translate(-5px,-6px);
+transform: rotate(45deg) translate(-5px,-6px);
 }
 
 
@@ -228,18 +225,21 @@ a {
     text-decoration: none;
     margin: 15px 0;
 }
-
 .container {
-    background: #fff;
+    background: #f2eeee;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
     position: relative;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+    height: 80vh;
+    max-width: 720px;
     overflow: hidden;
-    width: 768px;
-    max-width: 80%;
-    min-height: 450px;
-    margin-top: 20%;
-    margin-left: 6%;
+    width: 100%; 
+    margin: 0 auto;
 }
 
 .form-container form {
@@ -403,12 +403,6 @@ button.ghost {
     transform: translateY(20%);
 }
 
-.footer {
-	margin-top: 25px;
-	text-align: center;
-}
-
-
 .icons {
 	display: flex;
 	width: 30px;
@@ -416,55 +410,90 @@ button.ghost {
 	letter-spacing: 15px;
 	align-items: center;
     justify-content: center;
-    display: flex;
     margin-left: 50% ;
     margin-top: 10px;
+    color: black;
 }
-@media screen and (max-width: 800px){
+/* Add your original CSS here */
+
+@media screen and (max-width: 800px) {
     .container {
-       background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
-    position: relative;
-    overflow: hidden;
-    width: 768px;
-    max-width: 80%;
-    min-height: 450px;
-    margin-top: 20%;
-    margin-left: 6%;
-
-
+        width: 100%;
+        margin-top: 30%;
+        margin-left: 3%;
+        margin-right: 3%;
+        height: auto;
+        padding-bottom: 10%;
+        margin-bottom: 10%;
+        position: sticky;
 
     }
+
     .form-container {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        transition: all .6s ease-in-out;
+        position: static;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        margin-top: 10%;
     }
-    
-    .show-form-container
-    
-    .overlay-container {
-        width: 50%;
-        height: 100vh;
-        left: 0;
-        top: 0;
-        transform: translateY(-20%);
-        transition: all 0.6s ease-in-out;
+    .sign-up-container {
+        position: static;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        z-index: 5;
+    }
 
+    .overlay-container {
+        position: static;
+        width: 100%;
+        overflow: auto;
     }
+
     .overlay {
         width: 100%;
         left: 0;
         transform: translateY(0);
-        transition: all 0.6s ease-in-out;
-    }
-    .close, .open {
-        display: none;
-    }
-    .icons{
-        margin-left: 40%;
+        transition: none;
     }
 
+    .overlay-panel {
+        width: 100%;
+        height: auto;
+        transform: translateY(0);
+        transition: none;
+    }
+
+    .overlay-left {
+        transform: translateY(0);
+    }
+
+    .overlay-right {
+        transform: translateY(0);
+    }
+    
+
+    .footer {
+        margin-top: 25px;
+        text-align: center;
+        position: relative;
+    }
+
+    .icons {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .icons a {
+        margin: 0 5px;
+    }
+}
+footer {
+background-color: #a43c3c;
+color: rgb(14, 13, 13);
+text-align: center;
+padding: 5px 0;
+margin-top: 5%;
 }
