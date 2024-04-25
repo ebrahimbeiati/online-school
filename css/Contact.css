@@ -274,6 +274,10 @@ margin-top: 5%;
     margin-left: 50% ;
     margin-top: 10px;
 }
+.icons i {
+    color: #020303; 
+    font-size: 24px;
+}
 
 
 
@@ -293,7 +297,7 @@ margin-top: 5%;
         margin-top: 30px;
     }
     footer {
-background-color: #c1501f;
+background-color: #a43c3c;
 color: rgb(14, 13, 13);
 text-align: center;
 padding: 5px 0;

@@ -1,7 +1,8 @@
 
 * {
-margin: 0;
-box-sizing: border-box;
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Global styles */
@@ -194,12 +195,12 @@ padding: 100px 0;
 display: flex;
 justify-content: center;
 align-items: center;
-margin:2% auto;
 }
 
 .hero .content {
 flex: 1;
 text-align: left;
+margin-left: 2%;
 }
 
 .hero h1 {
@@ -220,7 +221,7 @@ justify-content: space-between;
 flex-wrap: wrap;
 width: 100%;
 max-width: 1200px;
-margin: 10% auto;
+margin: 10% 2%;
 }
 
 .about-image {
@@ -293,6 +294,10 @@ color: rgb(14, 13, 13);
 text-align: center;
 padding: 5px 0;
 margin-top: 5%;
+}
+.icons i {
+    color: #020303; 
+    font-size: 24px;
 }
 
 

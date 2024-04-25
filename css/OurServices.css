@@ -326,6 +326,10 @@ nav{
     margin-top: 10px;
     color: black;
 }
+.icons i {
+    color: #020303; 
+    font-size: 24px;
+}
 footer {
 background-color: #a43c3c;
 color: rgb(14, 13, 13);
@@ -333,6 +337,7 @@ text-align: center;
 padding: 5px 0;
 margin-top: 5%;
 }
+
 
 
 /* Responsive styles */
@@ -403,7 +408,7 @@ margin-top: 5%;
     }
 
     .feature:hover .card {
-        top: 15% !important; /* Added !important to override inline styles */
+        top: 15% !important;
         left: 20% !important;
     }
         .footer {
