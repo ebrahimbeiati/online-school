@@ -276,9 +276,45 @@ font-size: 36px;
 color: #ccc;
 margin-right: 10px;
 }
+.icons {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    letter-spacing: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50% ;
+    margin-top: 10px;
+    color: black;
+}
+footer {
+background-color: #a43c3c;
+color: rgb(14, 13, 13);
+text-align: center;
+padding: 5px 0;
+margin-top: 5%;
+}
+
 
 @media screen and (max-width: 768px) {
 .testimonials .col-md-6 p {
     font-size: 16px;
 }
+
+    .footer {
+        margin-top: 25px;
+        text-align: center;
+        position: relative;
+    }
+
+    .icons {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .icons a {
+        margin: 0 5px;
+    }
 }

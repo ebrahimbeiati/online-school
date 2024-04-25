@@ -228,7 +228,7 @@ a {
 .container {
     background: #f2eeee;
     border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(20, 13, 13, 0.2);
     position: relative;
     display: flex;
     justify-content: center; /* Horizontally center */
@@ -404,16 +404,25 @@ button.ghost {
 }
 
 .icons {
-	display: flex;
-	width: 30px;
-	height: 30px;
-	letter-spacing: 15px;
-	align-items: center;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    letter-spacing: 15px;
+    align-items: center;
     justify-content: center;
     margin-left: 50% ;
     margin-top: 10px;
-    color: black;
+    color: rgb(63, 19, 242);
 }
+footer {
+background-color: #a43c3c;
+color: rgb(14, 13, 13);
+text-align: center;
+padding: 5px;
+margin-top: 5%;
+}
+
+
 /* Add your original CSS here */
 
 @media screen and (max-width: 800px) {
@@ -473,7 +482,7 @@ button.ghost {
     }
     
 
-    .footer {
+     .footer {
         margin-top: 25px;
         text-align: center;
         position: relative;
@@ -489,11 +498,6 @@ button.ghost {
     .icons a {
         margin: 0 5px;
     }
+
 }
-footer {
-background-color: #a43c3c;
-color: rgb(14, 13, 13);
-text-align: center;
-padding: 5px 0;
-margin-top: 5%;
-}
+
