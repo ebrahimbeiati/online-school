@@ -14,7 +14,7 @@ font-family: Arial, sans-serif;
 nav{
 height: 6rem;
 width: 100vw;
-background-color: #ba5925;
+background-color:#c58563;
 box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 display: flex;
 z-index: 10;
@@ -144,7 +144,7 @@ nav{
 }
 .nav-links{
     position: fixed;
-    background: #e95607;
+    background: #c58563;
     height: 100vh;
     width: 100%;
     flex-direction: column;
@@ -231,15 +231,15 @@ a {
     box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(20, 13, 13, 0.2);
     position: relative;
     display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
+    justify-content: center; 
+    align-items: center;
     flex-direction: column;
     transition: all .2s ease-in-out;
     height: 80vh;
     max-width: 720px;
     overflow: hidden;
     width: 100%; 
-    margin: 0 auto;
+    margin: 5% auto;
 }
 
 .form-container form {
@@ -280,9 +280,9 @@ a {
 
 button {
     border-radius: 20px;
-    border: 1px solid #ff4b2b;
-    background: #ff445c;
-    color: #fff;
+    border: 1px solid #c58563;
+    background: #c58563;
+    color: #191616;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
@@ -300,8 +300,9 @@ button:focus {
 }
 
 button.ghost {
-    background: transparent;
+    background: white;
     border-color: #fff;
+
 }
 
 .form-container {
@@ -336,8 +337,8 @@ button.ghost {
 }
 
 .overlay {
-    background: #ff416c;
-    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+    background: white;
+    background: linear-gradient(to right, #c58563, #c58563) no-repeat 0 0 / cover;
     color: #fff;
     position: relative;
     left: -100%;
@@ -415,7 +416,7 @@ button.ghost {
     color: rgb(63, 19, 242);
 }
 footer {
-background-color: #a43c3c;
+background-color: #c58563;
 color: rgb(14, 13, 13);
 text-align: center;
 padding: 5px;
