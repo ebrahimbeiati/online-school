@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +7,7 @@
 
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+   width: 100%;
 }
 
 nav{
@@ -119,6 +118,7 @@ nav{
     nav{
         position: fixed;
         z-index: 3;
+        margin: 0%;
     }
     .hamburger{
         display:block;
@@ -189,132 +189,189 @@ nav{
     transform: rotate(45deg) translate(-5px,-6px);
 }
 
-.ring {
-    position: relative;
-    width: 600px;
-    height: 600px;
+
+.our-services {
     display: flex;
     justify-content: center;
     align-items: center;
-   
-}
-
-.ring i {
-    position: absolute;
-    inset: 0;
-    border: 2px solid #fff;
-    transition: 0.5s;
-}
-
-.ring i:nth-child(1) {
-    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-    animation: animate 6s linear infinite;
-}
-
-.ring i:nth-child(2),
-.ring i:nth-child(3) {
-    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-    animation: animate 20s linear infinite, animate2 10s linear infinite;
-}
-
-.ring:hover i {
-    border: 6px solid var(--clr);
-    filter: drop-shadow(0 0 20px var(--clr));
-
-
-
-}
-
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes animate2 {
-    0% {
-        transform: rotate(360deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-
-.features {
-    
-    background-color: #851d1d;
     width: 100%;
-   padding: 5%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    position: relative;
- 
-
-}
-
-.features h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 36px;
-    color: white;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.feature {
-    position: relative;
-    width: 20vh;
-    height: 10vh;
-    border-radius: 50%;
-    display: flex;
-   margin-bottom: 30px;
-    justify-content: center;
-    align-items: center;
-    transition: all .4s ease-in-out;
+    height: 100%;
+    background: #baa467;
+    perspective: 2000px;
+    transform-style: preserve-3d;
   
-    cursor: pointer;
-    overflow: hidden;
- 
 }
 
-/* Image styles */
-.feature img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-/* Links container styles */
-.links {
+.playground {
+    position: relative;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    width: 1000px;
+    height: 500px;
+    perspective: 2000px;
 }
 
-/* Container styles */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.page {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    aspect-ratio: 1/1;
+    transform-origin: left;
+    transition: 1s transform  ease-in-out;
+    transform-style: preserve-3d;
 }
 
-/* Title styles */
-.h-feature {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
+.page img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    backface-visibility: hidden;
+    font-weight: bolder;
 }
+
+.page img:first-child {
+    border-radius: 0 5% 5% 0;
+}
+
+.page img:nth-child(2) {
+    transform: rotateY(-180deg);
+    border-radius: 5% 0 0 5%;
+}
+
+.page.page--1 {
+    z-index: 100;
+    animation: turningPage1 1s ease-in forwards;
+    animation-delay: 1s;
+}
+.page.page--2 {
+    z-index: 99;
+    animation: turningPage2 1s ease-in forwards;
+    animation-delay: 3s;
+}
+.page.page--3 {
+    z-index: 98;
+    animation: turningPage3 1s ease-in forwards;
+    animation-delay: 5s;
+}
+.page.page--4 {
+    z-index: 97;
+    animation: turningPage4 1s ease-in forwards;
+    animation-delay: 7s;
+}
+.page.page--5 {
+    z-index: 96;
+    animation: turningPage5 1s ease-in forwards;
+    animation-delay: 9s;
+}
+.page.page--6 {
+    z-index: 95;
+    animation: turningPage6 1s ease-in forwards;
+    animation-delay: 11s;
+}
+.page.page--7 {
+    z-index: 94;
+    animation: turningPage7 1s ease-in forwards;
+    animation-delay: 13s;
+}
+.page.page--8 {
+    z-index: 93;
+    animation: turningPage8 1s ease-in forwards;
+    animation-delay: 15s;
+}
+.page.page--9 {
+    z-index: 92;
+    animation: turningPage9 1s ease-in forwards;
+    animation-delay: 17s;
+}
+
+
+@keyframes turningPage1 {
+    0% {
+        z-index: 101;
+    }
+    100% {
+        transform: rotateY(-180deg);
+        z-index: 101;
+    }
+}
+
+@keyframes turningPage2 {
+    0% {
+        z-index: 102;
+    }
+    100% {
+        transform: rotateY(-180deg);
+        z-index: 102;
+    }
+}
+
+@keyframes turningPage3 {
+    0% {
+        z-index: 103;
+    }
+    100% {
+        transform: rotateY(-180deg);
+        z-index: 103;
+    }
+}
+@keyframes turningPage4 {
+    0% {
+        z-index: 104;
+    }
+    100% {
+        transform: rotateY(-180deg);
+        z-index: 104;
+    }
+}
+
+@keyframes turningPage5 {
+    0% {
+        z-index: 105;
+    }
+    100% {
+        transform: rotateY(-180deg);
+        z-index: 105;
+    }
+}
+
+@keyframes turningPage6 {
+    0% {
+        z-index: 106;
+    }
+    100% {
+        transform: rotateY(-180deg);
+        z-index: 106;
+    }
+}
+@keyframes turningPage7 {
+    0% {
+        z-index: 107;
+    }
+    100% {
+        transform: rotateY(-180deg);
+        z-index: 107;
+    }
+}
+@keyframes turningPage8 {
+    0% {
+        z-index: 108;
+    }
+    100% {
+        transform: rotateY(-180deg);
+        z-index: 108;
+    }
+}
+@keyframes turningPage9 {
+    0% {
+        z-index: 109;
+    }
+    100% {
+        transform: rotateY(-180deg);
+        z-index: 109;
+    }
+}
+
+
 .icons {
     display: flex;
     width: 30px;
@@ -340,77 +397,7 @@ margin-top: 5%;
 
 
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-    .feature {
-        width: 100%;
-        max-width: 250px;
-        padding: 20% auto;
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 20% auto;
-    }
 
-    .links {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.feature:hover .banner-img {
-    transform: scale(1.2);
-}
-
-
-.card {
-    position: fixed !important;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f9f7f7;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    color: #141212;
-    transition: top 0.5s ease-in-out;
-}
-
-.feature:hover .card {
-    top: 10%;
-    left: 30%;
-
-}
-
-
-.card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 18px;
-    color: #666;
-}
-
-@media screen and (max-width: 768px) {
-    .feature {
-        grid-template-columns: repeat(2, 1fr);
-
-
-         /* Change to two columns */
-    }
-
-    .features h2 {
-        font-size: 24px;
-    }
-
-    .feature:hover .card {
-        top: 15% !important;
-        left: 20% !important;
-    }
         .footer {
         margin-top: 25px;
         text-align: center;
@@ -427,46 +414,90 @@ margin-top: 5%;
     .icons a {
         margin: 0 5px;
     }
+   
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
 
-}
-
+/* Styling for desktop version */
 .blog {
-       background-color: #fff;
-    padding: 50px 0;
+    padding: 30px 0; /* Adjust padding as needed */
+    background-color: #f9f9f9;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 3%;
 }
 
 .blog h2 {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 30px;
+    font-size: 36px; /* Set the heading font size */
+    text-align: center; /* Center align the heading */
+    margin-bottom: 30px; /* Add some bottom margin */
 }
 
 .blog-post {
-    background-color: #f9f7f7;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    background-color: #fff; /* Set background color for each post */
+    padding: 30px; /* Add padding around each post */
+    border-radius: 10px; /* Add border radius for a rounded look */
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s; /* Add transition for smoother hover effect */
 }
 
-.blog-post h2 {
-   text-align: center;
-    margin-bottom: 40px;
-    color: #333;
+.blog-post h3 {
+    font-size: 24px; /* Set the post title font size */
+    margin-bottom: 20px; /* Add bottom margin to the title */
 }
 
 .blog-post p {
-  font-size: 18px;
-    line-height: 1.6;
-    color: #666;
+    font-size: 18px; /* Set the paragraph font size */
+    line-height: 1.6; /* Set line height for better readability */
+    color: #666; /* Set text color */
 }
 
 .blog-post a {
-    color: #a43c3c;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    color: #a43c3c; /* Set link color */
+    text-decoration: none; /* Remove default link underline */
+    font-weight: bold; /* Set font weight */
+    transition: color 0.3s; /* Add transition for smoother hover effect */
 }
 
 .blog-post a:hover {
-    color: #911b1b;
+    color: #911b1b; /* Change link color on hover */
+}
+
+/* Styling for mobile version */
+@media screen and (max-width: 768px) {
+    .page{
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
+    .blog {
+        padding: 0px;
+        margin-top: 45%; /* Reduce padding for smaller screens */
+    }
+
+    .blog h2 {
+        font-size: 30px; /* Adjust heading font size for smaller screens */
+        margin-bottom: 20px; /* Adjust bottom margin for smaller screens */
+    }
+
+    .blog-post {
+        padding: 20px; /* Reduce padding for smaller screens */
+        margin-bottom: 20px; /* Adjust bottom margin for smaller screens */
+    }
+
+    .blog-post h3 {
+        font-size: 22px; /* Adjust post title font size for smaller screens */
+        margin-bottom: 15px; /* Adjust bottom margin for smaller screens */
+    }
+
+    .blog-post p {
+        font-size: 16px; /* Adjust paragraph font size for smaller screens */
+        line-height: 1.5; /* Adjust line height for better readability */
+    }
 }
