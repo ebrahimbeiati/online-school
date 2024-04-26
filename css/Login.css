@@ -8,6 +8,8 @@ box-sizing: border-box;
 /* Global styles */
 body {
 font-family: Arial, sans-serif;
+   width: 100%;
+
 
 }
 
@@ -202,12 +204,12 @@ transform: rotate(45deg) translate(-5px,-6px);
 }
 
 
-h1 {
+.container h1 {
     font-weight: bold;
     margin: 0;
 }
 
-p {
+.container p {
     font-size: 14px;
     font-weight: 100;
     line-height: 20px;
@@ -215,11 +217,11 @@ p {
     margin: 20px 0 30px;
 }
 
-span {
+.container span {
     font-size: 12px;
 }
 
-a {
+.container a {
     color: #333;
     font-size: 14px;
     text-decoration: none;
@@ -404,25 +406,6 @@ button.ghost {
     transform: translateY(20%);
 }
 
-.icons {
-    display: flex;
-    width: 40px;
-    height: 40px;
-    letter-spacing: 15px;
-    align-items: center;
-    justify-content: center;
-    margin-left: 50% ;
-    margin-top: 10px;
-    color: rgb(63, 19, 242);
-}
-footer {
-background-color: #c58563;
-color: rgb(14, 13, 13);
-text-align: center;
-padding: 5px;
-margin-top: 5%;
-}
-
 
 /* Add your original CSS here */
 
@@ -481,24 +464,27 @@ margin-top: 5%;
     .overlay-right {
         transform: translateY(0);
     }
-    
-
-     .footer {
-        margin-top: 25px;
-        text-align: center;
-        position: relative;
-    }
-
-    .icons {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        margin: 10px 0;
-    }
-
-    .icons a {
-        margin: 0 5px;
-    }
-
+}
+.icons {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    letter-spacing: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50% ;
+    margin-top: 10px;
+    color: black;
 }
 
+footer {
+background-color: #c58563;
+color: rgb(14, 13, 13);
+text-align: center;
+padding:19px 0;
+margin-top: 5%;
+}
+.icons i {
+    color: #050505; 
+    font-size: 24px;
+}
